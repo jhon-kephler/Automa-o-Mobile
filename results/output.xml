@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.9.6 on win32)" generated="20210914 19:23:17.168" rpa="false" schemaversion="2">
+<suite id="s1" name="Luckjoy" source="E:\Estudo\Automação Mobile\test\luckjoy.robot">
+<test id="s1-t1" name="Localizando e abrindo o apk">
+<kw name="Abrindo o aplicativo" library="luckjoy_resource">
+<msg timestamp="20210914 19:23:17.430" level="TRACE">Arguments: [  ]</msg>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4725/wd/hub</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=device</arg>
+<arg>appPackage=com.projeto.appob5piloto</arg>
+<arg>appActivity=com.projeto.appob5piloto.view.MainActivity</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<msg timestamp="20210914 19:23:17.430" level="TRACE">Arguments: [ 'http://localhost:4725/wd/hub' | platformName='Android' | deviceName='device' | appPackage='com.projeto.appob5piloto' | appActivity='com.projeto.appob5piloto.view.MainActivity' ]</msg>
+<msg timestamp="20210914 19:23:19.463" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session {"capabilities": {"firstMatch": [{"platformName": "Android", "appium:deviceName": "device", "appium:appPackage": "com.projeto.appob5piloto", "appium:appActivity": "com.projeto.appob5piloto.view.MainActivity"}]}, "desiredCapabilities": {"platformName": "Android", "deviceName": "device", "appPackage": "com.projeto.appob5piloto", "appActivity": "com.projeto.appob5piloto.view.MainActivity"}}</msg>
+<msg timestamp="20210914 19:23:19.475" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4725</msg>
+<msg timestamp="20210914 19:23:30.962" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session HTTP/1.1" 200 887</msg>
+<msg timestamp="20210914 19:23:30.963" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:30.966" level="DEBUG">Opened application with session id 1d7cccf7-4abe-4ac5-9b61-b804a455a757</msg>
+<msg timestamp="20210914 19:23:30.966" level="TRACE">Return: 1</msg>
+<status status="PASS" starttime="20210914 19:23:17.430" endtime="20210914 19:23:30.966"/>
+</kw>
+<msg timestamp="20210914 19:23:30.966" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 19:23:17.429" endtime="20210914 19:23:30.966"/>
+</kw>
+<kw name="Vericando pagina" library="luckjoy_resource">
+<msg timestamp="20210914 19:23:30.972" level="TRACE">Arguments: [  ]</msg>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${IP_CONFIG}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20210914 19:23:30.973" level="TRACE">Arguments: [ 'id=com.projeto.appob5piloto:id/btn_ip_conf' ]</msg>
+<msg timestamp="20210914 19:23:30.973" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements {"using": "id", "value": "com.projeto.appob5piloto:id/btn_ip_conf"}</msg>
+<msg timestamp="20210914 19:23:31.525" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20210914 19:23:31.526" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:31.526" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 19:23:30.973" endtime="20210914 19:23:31.526"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${ABRIR_CONTA}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20210914 19:23:31.526" level="TRACE">Arguments: [ 'id=com.projeto.appob5piloto:id/btn_apresentacao_abrir_conta' ]</msg>
+<msg timestamp="20210914 19:23:31.527" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements {"using": "id", "value": "com.projeto.appob5piloto:id/btn_apresentacao_abrir_conta"}</msg>
+<msg timestamp="20210914 19:23:31.573" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20210914 19:23:31.573" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:31.573" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 19:23:31.526" endtime="20210914 19:23:31.573"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${JA_TENHO_CONTA}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20210914 19:23:31.574" level="TRACE">Arguments: [ 'id=com.projeto.appob5piloto:id/btn_tenho_conta' ]</msg>
+<msg timestamp="20210914 19:23:31.574" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements {"using": "id", "value": "com.projeto.appob5piloto:id/btn_tenho_conta"}</msg>
+<msg timestamp="20210914 19:23:31.625" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20210914 19:23:31.626" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:31.626" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 19:23:31.574" endtime="20210914 19:23:31.626"/>
+</kw>
+<msg timestamp="20210914 19:23:31.626" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 19:23:30.972" endtime="20210914 19:23:31.626"/>
+</kw>
+<status status="PASS" starttime="20210914 19:23:17.429" endtime="20210914 19:23:31.627"/>
+</test>
+<test id="s1-t2" name="Logando no app">
+<kw name="Inserindo o ip" library="luckjoy_resource">
+<msg timestamp="20210914 19:23:31.628" level="TRACE">Arguments: [  ]</msg>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${IP_CONFIG}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20210914 19:23:31.629" level="TRACE">Arguments: [ 'id=com.projeto.appob5piloto:id/btn_ip_conf' ]</msg>
+<msg timestamp="20210914 19:23:31.631" level="INFO">Clicking element 'id=com.projeto.appob5piloto:id/btn_ip_conf'.</msg>
+<msg timestamp="20210914 19:23:31.631" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements {"using": "id", "value": "com.projeto.appob5piloto:id/btn_ip_conf"}</msg>
+<msg timestamp="20210914 19:23:31.673" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20210914 19:23:31.674" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:31.674" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/element/fa115fb6-a292-45c2-b883-a7ca27d74761/click {"id": "fa115fb6-a292-45c2-b883-a7ca27d74761"}</msg>
+<msg timestamp="20210914 19:23:31.717" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/element/fa115fb6-a292-45c2-b883-a7ca27d74761/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20210914 19:23:31.717" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:31.717" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 19:23:31.628" endtime="20210914 19:23:31.717"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${SET_IP}</arg>
+<arg>192.95.42.16</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20210914 19:23:31.717" level="TRACE">Arguments: [ 'id=com.projeto.appob5piloto:id/text_input_edit_ip' | '192.95.42.16' ]</msg>
+<msg timestamp="20210914 19:23:31.720" level="INFO">Typing text '192.95.42.16' into text field 'id=com.projeto.appob5piloto:id/text_input_edit_ip'</msg>
+<msg timestamp="20210914 19:23:31.721" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements {"using": "id", "value": "com.projeto.appob5piloto:id/text_input_edit_ip"}</msg>
+<msg timestamp="20210914 19:23:31.968" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20210914 19:23:31.969" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:31.969" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/element/1c740b4e-0131-4397-9759-dae1666081e4/value {"text": "192.95.42.16", "value": ["1", "9", "2", ".", "9", "5", ".", "4", "2", ".", "1", "6"], "id": "1c740b4e-0131-4397-9759-dae1666081e4"}</msg>
+<msg timestamp="20210914 19:23:33.025" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/element/1c740b4e-0131-4397-9759-dae1666081e4/value HTTP/1.1" 200 14</msg>
+<msg timestamp="20210914 19:23:33.025" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:33.026" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 19:23:31.717" endtime="20210914 19:23:33.026"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${SALVAR_BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20210914 19:23:33.026" level="TRACE">Arguments: [ 'id=com.projeto.appob5piloto:id/btn_salvar' ]</msg>
+<msg timestamp="20210914 19:23:33.028" level="INFO">Clicking element 'id=com.projeto.appob5piloto:id/btn_salvar'.</msg>
+<msg timestamp="20210914 19:23:33.029" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements {"using": "id", "value": "com.projeto.appob5piloto:id/btn_salvar"}</msg>
+<msg timestamp="20210914 19:23:33.538" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20210914 19:23:33.538" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:33.538" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/element/370052ba-5e83-4269-8422-2aab51d196ad/click {"id": "370052ba-5e83-4269-8422-2aab51d196ad"}</msg>
+<msg timestamp="20210914 19:23:33.560" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/element/370052ba-5e83-4269-8422-2aab51d196ad/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20210914 19:23:33.560" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:33.560" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 19:23:33.026" endtime="20210914 19:23:33.560"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${VOLTAR}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20210914 19:23:33.561" level="TRACE">Arguments: [ 'xpath=//android.widget.ImageButton[@content-desc="Navigate up"]' ]</msg>
+<msg timestamp="20210914 19:23:33.562" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Navigate up"]'.</msg>
+<msg timestamp="20210914 19:23:33.563" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements {"using": "xpath", "value": "//android.widget.ImageButton[@content-desc=\"Navigate up\"]"}</msg>
+<msg timestamp="20210914 19:23:33.817" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20210914 19:23:33.817" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:33.817" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/element/7f5baac4-70a2-4b94-96cf-3a6f024ef230/click {"id": "7f5baac4-70a2-4b94-96cf-3a6f024ef230"}</msg>
+<msg timestamp="20210914 19:23:34.226" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/element/7f5baac4-70a2-4b94-96cf-3a6f024ef230/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20210914 19:23:34.227" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:34.227" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 19:23:33.560" endtime="20210914 19:23:34.227"/>
+</kw>
+<msg timestamp="20210914 19:23:34.227" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 19:23:31.628" endtime="20210914 19:23:34.227"/>
+</kw>
+<kw name="Vericando pagina" library="luckjoy_resource">
+<msg timestamp="20210914 19:23:34.228" level="TRACE">Arguments: [  ]</msg>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${IP_CONFIG}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20210914 19:23:34.229" level="TRACE">Arguments: [ 'id=com.projeto.appob5piloto:id/btn_ip_conf' ]</msg>
+<msg timestamp="20210914 19:23:34.229" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements {"using": "id", "value": "com.projeto.appob5piloto:id/btn_ip_conf"}</msg>
+<msg timestamp="20210914 19:23:34.415" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20210914 19:23:34.416" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:34.416" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 19:23:34.229" endtime="20210914 19:23:34.416"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${ABRIR_CONTA}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20210914 19:23:34.416" level="TRACE">Arguments: [ 'id=com.projeto.appob5piloto:id/btn_apresentacao_abrir_conta' ]</msg>
+<msg timestamp="20210914 19:23:34.416" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements {"using": "id", "value": "com.projeto.appob5piloto:id/btn_apresentacao_abrir_conta"}</msg>
+<msg timestamp="20210914 19:23:34.924" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20210914 19:23:34.924" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:34.924" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 19:23:34.416" endtime="20210914 19:23:34.924"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${JA_TENHO_CONTA}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20210914 19:23:34.925" level="TRACE">Arguments: [ 'id=com.projeto.appob5piloto:id/btn_tenho_conta' ]</msg>
+<msg timestamp="20210914 19:23:34.925" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements {"using": "id", "value": "com.projeto.appob5piloto:id/btn_tenho_conta"}</msg>
+<msg timestamp="20210914 19:23:34.948" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20210914 19:23:34.949" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:34.949" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 19:23:34.924" endtime="20210914 19:23:34.949"/>
+</kw>
+<msg timestamp="20210914 19:23:34.949" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 19:23:34.228" endtime="20210914 19:23:34.949"/>
+</kw>
+<kw name="Entrando no app" library="luckjoy_resource">
+<msg timestamp="20210914 19:23:34.950" level="TRACE">Arguments: [  ]</msg>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${JA_TENHO_CONTA}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20210914 19:23:34.950" level="TRACE">Arguments: [ 'id=com.projeto.appob5piloto:id/btn_tenho_conta' ]</msg>
+<msg timestamp="20210914 19:23:34.952" level="INFO">Clicking element 'id=com.projeto.appob5piloto:id/btn_tenho_conta'.</msg>
+<msg timestamp="20210914 19:23:34.953" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements {"using": "id", "value": "com.projeto.appob5piloto:id/btn_tenho_conta"}</msg>
+<msg timestamp="20210914 19:23:34.980" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20210914 19:23:34.980" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:34.981" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/element/764f94e0-4b96-41f1-9702-90979a181ff5/click {"id": "764f94e0-4b96-41f1-9702-90979a181ff5"}</msg>
+<msg timestamp="20210914 19:23:35.009" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/element/764f94e0-4b96-41f1-9702-90979a181ff5/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20210914 19:23:35.009" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:35.009" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 19:23:34.950" endtime="20210914 19:23:35.009"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${LOGIN_VIEW}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20210914 19:23:35.010" level="TRACE">Arguments: [ 'id=com.projeto.appob5piloto:id/cardView_login' ]</msg>
+<msg timestamp="20210914 19:23:35.010" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements {"using": "id", "value": "com.projeto.appob5piloto:id/cardView_login"}</msg>
+<msg timestamp="20210914 19:23:35.320" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20210914 19:23:35.320" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:35.320" level="DEBUG">GET http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/element/0cdc459d-c671-4840-bce8-730a794e78c6/displayed {"id": "0cdc459d-c671-4840-bce8-730a794e78c6"}</msg>
+<msg timestamp="20210914 19:23:35.832" level="DEBUG">http://127.0.0.1:4725 "GET /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/element/0cdc459d-c671-4840-bce8-730a794e78c6/displayed HTTP/1.1" 200 14</msg>
+<msg timestamp="20210914 19:23:35.833" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:35.833" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 19:23:35.009" endtime="20210914 19:23:35.833"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${LOGIN_CPF}</arg>
+<arg>${CPF_USUARIO}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20210914 19:23:35.833" level="TRACE">Arguments: [ 'id=com.projeto.appob5piloto:id/text_input_edit_cpf' | '82084804019' ]</msg>
+<msg timestamp="20210914 19:23:35.836" level="INFO">Typing text '82084804019' into text field 'id=com.projeto.appob5piloto:id/text_input_edit_cpf'</msg>
+<msg timestamp="20210914 19:23:35.836" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements {"using": "id", "value": "com.projeto.appob5piloto:id/text_input_edit_cpf"}</msg>
+<msg timestamp="20210914 19:23:35.876" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20210914 19:23:35.877" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:35.877" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/element/99bd8027-deb9-44d6-8702-e12aa1d65310/value {"text": "82084804019", "value": ["8", "2", "0", "8", "4", "8", "0", "4", "0", "1", "9"], "id": "99bd8027-deb9-44d6-8702-e12aa1d65310"}</msg>
+<msg timestamp="20210914 19:23:36.429" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/element/99bd8027-deb9-44d6-8702-e12aa1d65310/value HTTP/1.1" 200 14</msg>
+<msg timestamp="20210914 19:23:36.429" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:36.429" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 19:23:35.833" endtime="20210914 19:23:36.429"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${LOGIN_SENHA}</arg>
+<arg>${SENHA_USUARIO}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20210914 19:23:36.430" level="TRACE">Arguments: [ 'id=com.projeto.appob5piloto:id/text_input_edit_senha' | '123456' ]</msg>
+<msg timestamp="20210914 19:23:36.432" level="INFO">Typing text '123456' into text field 'id=com.projeto.appob5piloto:id/text_input_edit_senha'</msg>
+<msg timestamp="20210914 19:23:36.432" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements {"using": "id", "value": "com.projeto.appob5piloto:id/text_input_edit_senha"}</msg>
+<msg timestamp="20210914 19:23:36.965" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20210914 19:23:36.965" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:36.965" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/element/af1cc6a6-9f02-4aba-b582-2cf693689ef6/value {"text": "123456", "value": ["1", "2", "3", "4", "5", "6"], "id": "af1cc6a6-9f02-4aba-b582-2cf693689ef6"}</msg>
+<msg timestamp="20210914 19:23:37.549" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/element/af1cc6a6-9f02-4aba-b582-2cf693689ef6/value HTTP/1.1" 200 14</msg>
+<msg timestamp="20210914 19:23:37.549" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:37.549" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 19:23:36.429" endtime="20210914 19:23:37.549"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${BUTTON_ENTRAR}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20210914 19:23:37.550" level="TRACE">Arguments: [ 'id=com.projeto.appob5piloto:id/btn_entrar_conta' ]</msg>
+<msg timestamp="20210914 19:23:37.552" level="INFO">Clicking element 'id=com.projeto.appob5piloto:id/btn_entrar_conta'.</msg>
+<msg timestamp="20210914 19:23:37.552" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements {"using": "id", "value": "com.projeto.appob5piloto:id/btn_entrar_conta"}</msg>
+<msg timestamp="20210914 19:23:37.593" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20210914 19:23:37.593" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:37.594" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/element/b7b46260-fa70-4843-b36e-73b99e024c22/click {"id": "b7b46260-fa70-4843-b36e-73b99e024c22"}</msg>
+<msg timestamp="20210914 19:23:38.061" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/element/b7b46260-fa70-4843-b36e-73b99e024c22/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20210914 19:23:38.061" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:38.061" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 19:23:37.549" endtime="20210914 19:23:38.061"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${NOME_USER}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20210914 19:23:38.061" level="TRACE">Arguments: [ 'id=com.projeto.appob5piloto:id/txt_nome' ]</msg>
+<msg timestamp="20210914 19:23:38.062" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements {"using": "id", "value": "com.projeto.appob5piloto:id/txt_nome"}</msg>
+<msg timestamp="20210914 19:23:38.132" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20210914 19:23:38.132" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:38.344" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements {"using": "id", "value": "com.projeto.appob5piloto:id/txt_nome"}</msg>
+<msg timestamp="20210914 19:23:39.458" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20210914 19:23:39.458" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:39.458" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 19:23:38.061" endtime="20210914 19:23:39.458"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${INICIAIS-USER}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20210914 19:23:39.458" level="TRACE">Arguments: [ 'id=com.projeto.appob5piloto:id/box_iniciais_nome' ]</msg>
+<msg timestamp="20210914 19:23:39.459" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements {"using": "id", "value": "com.projeto.appob5piloto:id/box_iniciais_nome"}</msg>
+<msg timestamp="20210914 19:23:39.480" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20210914 19:23:39.480" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:39.481" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 19:23:39.458" endtime="20210914 19:23:39.481"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${CONTINUAR}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20210914 19:23:39.481" level="TRACE">Arguments: [ 'id=com.projeto.appob5piloto:id/icon_continuar' ]</msg>
+<msg timestamp="20210914 19:23:39.481" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements {"using": "id", "value": "com.projeto.appob5piloto:id/icon_continuar"}</msg>
+<msg timestamp="20210914 19:23:39.504" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20210914 19:23:39.505" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:39.505" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 19:23:39.481" endtime="20210914 19:23:39.505"/>
+</kw>
+<msg timestamp="20210914 19:23:39.505" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 19:23:34.950" endtime="20210914 19:23:39.505"/>
+</kw>
+<status status="PASS" starttime="20210914 19:23:31.628" endtime="20210914 19:23:39.506"/>
+</test>
+<test id="s1-t3" name="Completar cadastro">
+<kw name="Dados pessoais" library="luckjoy_resource">
+<msg timestamp="20210914 19:23:39.508" level="TRACE">Arguments: [  ]</msg>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${CONTINUAR}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20210914 19:23:39.508" level="TRACE">Arguments: [ 'id=com.projeto.appob5piloto:id/icon_continuar' ]</msg>
+<msg timestamp="20210914 19:23:39.510" level="INFO">Clicking element 'id=com.projeto.appob5piloto:id/icon_continuar'.</msg>
+<msg timestamp="20210914 19:23:39.510" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements {"using": "id", "value": "com.projeto.appob5piloto:id/icon_continuar"}</msg>
+<msg timestamp="20210914 19:23:39.535" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20210914 19:23:39.535" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:39.536" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/element/6962e472-dcdf-4509-9a97-d2fa49d1f2db/click {"id": "6962e472-dcdf-4509-9a97-d2fa49d1f2db"}</msg>
+<msg timestamp="20210914 19:23:39.563" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/element/6962e472-dcdf-4509-9a97-d2fa49d1f2db/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20210914 19:23:39.563" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:39.563" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 19:23:39.508" endtime="20210914 19:23:39.563"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${SITUACAO_CAD}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20210914 19:23:39.564" level="TRACE">Arguments: [ 'id=com.projeto.appob5piloto:id/txt_inf_passo' ]</msg>
+<msg timestamp="20210914 19:23:39.564" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements {"using": "id", "value": "com.projeto.appob5piloto:id/txt_inf_passo"}</msg>
+<msg timestamp="20210914 19:23:39.748" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20210914 19:23:39.748" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:39.748" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 19:23:39.563" endtime="20210914 19:23:39.749"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${PROXIMA_ETAPA}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20210914 19:23:39.749" level="TRACE">Arguments: [ 'id=com.projeto.appob5piloto:id/btn_etapa' ]</msg>
+<msg timestamp="20210914 19:23:39.751" level="INFO">Clicking element 'id=com.projeto.appob5piloto:id/btn_etapa'.</msg>
+<msg timestamp="20210914 19:23:39.751" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements {"using": "id", "value": "com.projeto.appob5piloto:id/btn_etapa"}</msg>
+<msg timestamp="20210914 19:23:40.287" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20210914 19:23:40.287" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:40.287" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/element/20d37afe-336f-40b9-b4fe-806b07a85685/click {"id": "20d37afe-336f-40b9-b4fe-806b07a85685"}</msg>
+<msg timestamp="20210914 19:23:40.347" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/element/20d37afe-336f-40b9-b4fe-806b07a85685/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20210914 19:23:40.347" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:40.347" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 19:23:39.749" endtime="20210914 19:23:40.347"/>
+</kw>
+<msg timestamp="20210914 19:23:40.347" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 19:23:39.507" endtime="20210914 19:23:40.347"/>
+</kw>
+<kw name="Tipo do documento" library="luckjoy_resource">
+<msg timestamp="20210914 19:23:40.349" level="TRACE">Arguments: [  ]</msg>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${TIPO_DOC}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20210914 19:23:40.349" level="TRACE">Arguments: [ 'id=com.projeto.appob5piloto:id/auto_tipo_documento' ]</msg>
+<msg timestamp="20210914 19:23:40.352" level="INFO">Clicking element 'id=com.projeto.appob5piloto:id/auto_tipo_documento'.</msg>
+<msg timestamp="20210914 19:23:40.352" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements {"using": "id", "value": "com.projeto.appob5piloto:id/auto_tipo_documento"}</msg>
+<msg timestamp="20210914 19:23:40.656" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20210914 19:23:40.656" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:40.656" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/element/ad8dd2bd-2355-49c5-8fc2-94a6a5efa66e/click {"id": "ad8dd2bd-2355-49c5-8fc2-94a6a5efa66e"}</msg>
+<msg timestamp="20210914 19:23:41.278" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/element/ad8dd2bd-2355-49c5-8fc2-94a6a5efa66e/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20210914 19:23:41.279" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:41.279" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 19:23:40.349" endtime="20210914 19:23:41.279"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${RG_VERIFICADO}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20210914 19:23:41.279" level="TRACE">Arguments: [ 'id=com.projeto.appob5piloto:id/tv_rg' ]</msg>
+<msg timestamp="20210914 19:23:41.280" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements {"using": "id", "value": "com.projeto.appob5piloto:id/tv_rg"}</msg>
+<msg timestamp="20210914 19:23:41.369" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20210914 19:23:41.369" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:41.579" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements {"using": "id", "value": "com.projeto.appob5piloto:id/tv_rg"}</msg>
+<msg timestamp="20210914 19:23:42.532" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20210914 19:23:42.532" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:42.532" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 19:23:41.279" endtime="20210914 19:23:42.532"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${CER_NASCIMENT}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20210914 19:23:42.532" level="TRACE">Arguments: [ 'id=com.projeto.appob5piloto:id/tv_certidao_nasc' ]</msg>
+<msg timestamp="20210914 19:23:42.533" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements {"using": "id", "value": "com.projeto.appob5piloto:id/tv_certidao_nasc"}</msg>
+<msg timestamp="20210914 19:23:42.551" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20210914 19:23:42.551" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:42.551" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 19:23:42.532" endtime="20210914 19:23:42.551"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${RNE_VERIFICADO}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20210914 19:23:42.551" level="TRACE">Arguments: [ 'id=com.projeto.appob5piloto:id/tv_rne' ]</msg>
+<msg timestamp="20210914 19:23:42.552" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements {"using": "id", "value": "com.projeto.appob5piloto:id/tv_rne"}</msg>
+<msg timestamp="20210914 19:23:42.572" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20210914 19:23:42.573" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:42.573" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 19:23:42.551" endtime="20210914 19:23:42.573"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${RG_VERIFICADO}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20210914 19:23:42.574" level="TRACE">Arguments: [ 'id=com.projeto.appob5piloto:id/tv_rg' ]</msg>
+<msg timestamp="20210914 19:23:42.576" level="INFO">Clicking element 'id=com.projeto.appob5piloto:id/tv_rg'.</msg>
+<msg timestamp="20210914 19:23:42.576" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements {"using": "id", "value": "com.projeto.appob5piloto:id/tv_rg"}</msg>
+<msg timestamp="20210914 19:23:42.596" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20210914 19:23:42.596" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:42.596" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/element/32f73cf1-6c91-42f6-9b93-da7ad269897b/click {"id": "32f73cf1-6c91-42f6-9b93-da7ad269897b"}</msg>
+<msg timestamp="20210914 19:23:42.616" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/element/32f73cf1-6c91-42f6-9b93-da7ad269897b/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20210914 19:23:42.616" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:42.616" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 19:23:42.573" endtime="20210914 19:23:42.617"/>
+</kw>
+<msg timestamp="20210914 19:23:42.617" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 19:23:40.349" endtime="20210914 19:23:42.617"/>
+</kw>
+<kw name="País de nascimento" library="luckjoy_resource">
+<msg timestamp="20210914 19:23:42.617" level="TRACE">Arguments: [  ]</msg>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${PAIS_NASCIMENT}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20210914 19:23:42.618" level="TRACE">Arguments: [ 'id=com.projeto.appob5piloto:id/auto_pais_nascimento' ]</msg>
+<msg timestamp="20210914 19:23:42.620" level="INFO">Clicking element 'id=com.projeto.appob5piloto:id/auto_pais_nascimento'.</msg>
+<msg timestamp="20210914 19:23:42.620" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements {"using": "id", "value": "com.projeto.appob5piloto:id/auto_pais_nascimento"}</msg>
+<msg timestamp="20210914 19:23:42.905" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20210914 19:23:42.906" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:42.906" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/element/1d630c9d-c556-494a-8f40-72667150c466/click {"id": "1d630c9d-c556-494a-8f40-72667150c466"}</msg>
+<msg timestamp="20210914 19:23:43.263" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/element/1d630c9d-c556-494a-8f40-72667150c466/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20210914 19:23:43.263" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:43.263" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 19:23:42.618" endtime="20210914 19:23:43.263"/>
+</kw>
+<msg timestamp="20210914 19:23:43.263" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 19:23:42.617" endtime="20210914 19:23:43.263"/>
+</kw>
+<kw name="Local de nascimento" library="luckjoy_resource">
+<msg timestamp="20210914 19:23:43.264" level="TRACE">Arguments: [  ]</msg>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${PAIS_NASCIMENT}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20210914 19:23:43.264" level="TRACE">Arguments: [ 'id=com.projeto.appob5piloto:id/auto_pais_nascimento' ]</msg>
+<msg timestamp="20210914 19:23:43.267" level="INFO">Clicking element 'id=com.projeto.appob5piloto:id/auto_pais_nascimento'.</msg>
+<msg timestamp="20210914 19:23:43.267" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements {"using": "id", "value": "com.projeto.appob5piloto:id/auto_pais_nascimento"}</msg>
+<msg timestamp="20210914 19:23:43.430" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20210914 19:23:43.431" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:43.431" level="DEBUG">POST http://127.0.0.1:4725/wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/element/c0c54e31-fac0-4099-8426-cd6555ce011b/click {"id": "c0c54e31-fac0-4099-8426-cd6555ce011b"}</msg>
+<msg timestamp="20210914 19:23:44.293" level="DEBUG">http://127.0.0.1:4725 "POST /wd/hub/session/1d7cccf7-4abe-4ac5-9b61-b804a455a757/element/c0c54e31-fac0-4099-8426-cd6555ce011b/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20210914 19:23:44.293" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210914 19:23:44.293" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 19:23:43.264" endtime="20210914 19:23:44.293"/>
+</kw>
+<msg timestamp="20210914 19:23:44.294" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210914 19:23:43.264" endtime="20210914 19:23:44.294"/>
+</kw>
+<status status="PASS" starttime="20210914 19:23:39.507" endtime="20210914 19:23:44.296"/>
+</test>
+<status status="PASS" starttime="20210914 19:23:17.170" endtime="20210914 19:23:44.297"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Luckjoy">Luckjoy</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
